@@ -1,0 +1,7 @@
+{
+  "name": "eventzon",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "react"
+}
