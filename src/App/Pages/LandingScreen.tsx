@@ -2,16 +2,23 @@ import {
 	IonButton,
 	IonContent,
 	IonHeader,
+	IonModal,
 	IonPage,
 	IonTitle,
 	IonToolbar,
 	useIonViewWillEnter,
 } from "@ionic/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./custone.css";
 const LandingScreen = () => {
+	const [showLoader, SetShowLoader] = useState(false);
 	useIonViewWillEnter(() => (document.title = `EventZon | Home`));
-
+	useEffect(() => {
+		SetShowLoader(true);
+		setTimeout(() => {
+			SetShowLoader(false);
+		}, 4000);
+	}, []);
 	return (
 		<IonPage>
 			<IonHeader>
@@ -95,6 +102,21 @@ const LandingScreen = () => {
 					</div>
 				</div>
 			</IonContent>
+			<IonModal
+				onDidDismiss={() => SetShowLoader(false)}
+				backdropDismiss={false}
+				showBackdrop={false}
+				isOpen={showLoader}>
+				<IonContent fullscreen>
+					<img
+						alt='pic'
+						src={require("../bird_loader.gif")}
+						style={{
+							height: "99.41%",
+						}}
+					/>
+				</IonContent>
+			</IonModal>
 		</IonPage>
 	);
 };
