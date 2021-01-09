@@ -1,0 +1,43 @@
+.linear-bg {
+	background: rgb(2, 0, 36);
+	background: linear-gradient(
+		90deg,
+		rgba(2, 0, 36, 1) 0%,
+		rgba(255, 159, 221, 1) 0%,
+		rgba(217, 167, 244, 1) 23%,
+		rgba(46, 0, 255, 1) 100%
+	);
+}
+
+.header-link {
+	display: flex;
+	float: right;
+	font-size: 14px;
+	min-height: 50px;
+	padding: -20px 15px 0px -15px;
+	font-size: 17px;
+	font-weight: bold;
+	font-family: "Open Sans", sans-serif;
+	display: inline-block;
+	margin-left: 30px;
+}
+.header-link::after {
+	content: "";
+	display: block;
+	width: 0;
+	height: 2px;
+	background: #000000;
+	transition: width 0.3s;
+}
+.header-link:hover::after {
+	width: 100%;
+	transition: width 0.3s;
+}
+.logo {
+	float: left;
+	height: 50px;
+	transform: translate(50%, -20%);
+	font-size: 30px;
+	font-weight: bold;
+	font-family: "Redressed", cursive;
+}
