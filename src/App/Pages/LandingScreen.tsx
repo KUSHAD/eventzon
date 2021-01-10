@@ -37,14 +37,7 @@ const LandingScreen = () => {
 							height: "50px",
 						}}
 					/>
-					{/* <IonButton
-						className='header-link'
-						routerLink='/'
-						slot='end'
-						fill='clear'
-						color='dark'>
-						Home
-					</IonButton> */}
+
 					<IonButton
 						className='header-link'
 						routerLink='/e'
@@ -66,12 +59,24 @@ const LandingScreen = () => {
 			<IonContent>
 				<iframe
 					src='https://kushad.github.io/eventzon-new-about-us/'
-					// scrolling='no'
 					title='A'
 					style={{
 						height: "100vh",
 						width: "100%",
 					}}></iframe>
+				<a
+					href='https://eventzon.herokuapp.com/'
+					rel='noopener noreferrer'
+					target='_blank'>
+					<h1
+						style={{
+							textDecoration: "none",
+							color: "black",
+							textAlign: "center",
+						}}>
+						Check Out Our New Meeting Platform !!
+					</h1>
+				</a>
 				<div
 					style={{
 						textAlign: "center",
@@ -129,20 +134,6 @@ const LandingScreen = () => {
 						</IonButton>
 					</div>
 				</div>
-				<a
-					href='https://video-chat-app-kc.herokuapp.com/'
-					rel='noopener noreferrer'
-					target='_blank'>
-					<h1
-						style={{
-							textDecoration: "none",
-							color: "black",
-							textAlign: "center",
-						}}>
-						Check Out Our New Meeting Platform !!
-						https://video-chat-app-kc.herokuapp.com/
-					</h1>
-				</a>
 			</IonContent>
 		</IonPage>
 	);

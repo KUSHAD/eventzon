@@ -70,6 +70,19 @@ const AboutUs = () => {
 					src='https://kushad.github.io/hello-world/'
 					style={{ height: "90vh", width: "100%" }}
 				/>
+				<a
+					href='https://eventzon.herokuapp.com/'
+					rel='noopener noreferrer'
+					target='_blank'>
+					<h1
+						style={{
+							textDecoration: "none",
+							color: "black",
+							textAlign: "center",
+						}}>
+						Check Out Our New Meeting Platform !!
+					</h1>
+				</a>
 				<div
 					style={{
 						textAlign: "center",
@@ -127,20 +140,6 @@ const AboutUs = () => {
 						</IonButton>
 					</div>
 				</div>
-				<a
-					href='https://video-chat-app-kc.herokuapp.com/'
-					rel='noopener noreferrer'
-					target='_blank'>
-					<h1
-						style={{
-							textDecoration: "none",
-							color: "black",
-							textAlign: "center",
-						}}>
-						Check Out Our New Meeting Platform !!
-						https://video-chat-app-kc.herokuapp.com/
-					</h1>
-				</a>
 			</IonContent>
 		</IonPage>
 	);
