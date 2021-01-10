@@ -2,23 +2,25 @@ import {
 	IonButton,
 	IonContent,
 	IonHeader,
-	IonModal,
+	IonIcon,
 	IonPage,
 	IonTitle,
 	IonToolbar,
 	useIonViewWillEnter,
 } from "@ionic/react";
-import React, { useEffect, useState } from "react";
+import {
+	callOutline,
+	chatboxOutline,
+	logoFacebook,
+	logoInstagram,
+	logoLinkedin,
+	logoWhatsapp,
+} from "ionicons/icons";
+import React from "react";
 import "./custone.css";
 const LandingScreen = () => {
-	const [showLoader, SetShowLoader] = useState(false);
 	useIonViewWillEnter(() => (document.title = `EventZon | Home`));
-	useEffect(() => {
-		SetShowLoader(true);
-		setTimeout(() => {
-			SetShowLoader(false);
-		}, 4000);
-	}, []);
+
 	return (
 		<IonPage>
 			<IonHeader>
@@ -26,14 +28,23 @@ const LandingScreen = () => {
 					<div className='logo'>
 						<h1>EventZon</h1>
 					</div>
-					<IonButton
+					<img
+						src='../favicon.jpg'
+						alt=''
+						style={{
+							marginLeft: -110,
+							width: "50px",
+							height: "50px",
+						}}
+					/>
+					{/* <IonButton
 						className='header-link'
 						routerLink='/'
 						slot='end'
 						fill='clear'
 						color='dark'>
 						Home
-					</IonButton>
+					</IonButton> */}
 					<IonButton
 						className='header-link'
 						routerLink='/e'
@@ -54,11 +65,11 @@ const LandingScreen = () => {
 			</IonHeader>
 			<IonContent>
 				<iframe
-					src='https://kushad.github.io/discount-banner/'
-					scrolling='no'
+					src='https://kushad.github.io/eventzon-new-about-us/'
+					// scrolling='no'
 					title='A'
 					style={{
-						height: "110vh",
+						height: "100vh",
 						width: "100%",
 					}}></iframe>
 				<div
@@ -66,57 +77,59 @@ const LandingScreen = () => {
 						textAlign: "center",
 						display: "flex",
 						flexDirection: "column",
-						backgroundColor: "#F7F7FB",
+						backgroundColor: "#c5c8d0",
+						padding: "10px",
 					}}>
-					<IonTitle>PROUD TO WORK WITH</IonTitle>
-					<div style={{ flexDirection: "row" }}>
-						<img
-							src='https://eventplanningblueprint.com/wp-content/uploads/2019/09/New-Project-80.jpg'
-							alt=''
-							style={{
-								margin: 15,
-							}}
-						/>
-						<img
-							src='https://eventplanningblueprint.com/wp-content/uploads/2019/09/New-Project-83.jpg'
-							alt=''
-							style={{
-								margin: 15,
-							}}
-						/>
-						<img
-							src='https://eventplanningblueprint.com/wp-content/uploads/2020/10/New-Project-82.jpg'
-							alt=''
-							style={{ margin: 15 }}
-						/>
-						<img
-							src='https://eventplanningblueprint.com/wp-content/uploads/2019/09/New-Project-81.jpg'
-							alt=''
-							style={{ margin: 15 }}
-						/>
-						<img
-							src='https://eventplanningblueprint.com/wp-content/uploads/2020/10/New-Project-84.jpg'
-							alt=''
-							style={{ margin: 15 }}
-						/>
+					<IonTitle>Contact Us</IonTitle>
+					<div
+						style={{
+							flexDirection: "row",
+							justifyContent: "center",
+						}}>
+						<IonButton href='tel:916289606122' color='success'>
+							<IonIcon icon={callOutline} />
+							+91 62896 06122
+						</IonButton>
+						<IonButton href='sms:919073393039' color='warning'>
+							<IonIcon icon={chatboxOutline} />
+							+91 90733 93039
+						</IonButton>
+						<IonButton
+							href='https://api.whatsapp.com/send?phone=919073393039'
+							target='_blank'
+							color='success'>
+							<IonIcon icon={logoWhatsapp} />
+							+91 90733 93039
+						</IonButton>
+					</div>
+					<br />
+					<IonTitle>Follow Us</IonTitle>
+					<div
+						style={{
+							flexDirection: "row",
+							justifyContent: "center",
+						}}>
+						<IonButton
+							href='https://www.facebook.com/EventZon-106542798067120/?view_public_for=106542798067120'
+							target='_blank'
+							color='secondary'>
+							<IonIcon icon={logoFacebook} />
+						</IonButton>
+						<IonButton
+							href='https://www.instagram.com/eventzon123/'
+							target='_blank'
+							color='dark'>
+							<IonIcon icon={logoInstagram} />
+						</IonButton>
+						<IonButton
+							href='https://www.linkedin.com/company/eventzone/about/'
+							target='_blank'
+							color='tertiary'>
+							<IonIcon icon={logoLinkedin} />
+						</IonButton>
 					</div>
 				</div>
 			</IonContent>
-			<IonModal
-				onDidDismiss={() => SetShowLoader(false)}
-				backdropDismiss={false}
-				showBackdrop={false}
-				isOpen={showLoader}>
-				<IonContent fullscreen>
-					<img
-						alt='pic'
-						src={require("../bird_loader.gif")}
-						style={{
-							height: "99.41%",
-						}}
-					/>
-				</IonContent>
-			</IonModal>
 		</IonPage>
 	);
 };

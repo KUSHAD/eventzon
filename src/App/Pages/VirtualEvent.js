@@ -55,17 +55,10 @@ const VirtualEvent = () => {
 			<IonHeader>
 				<IonToolbar>
 					<IonButton slot='start' fill='clear'>
-						<IonBackButton text='Back' defaultHref='/' icon={chevronBack} />
+						<IonBackButton text='Back' defaultHref='/e' icon={chevronBack} />
 					</IonButton>
 					<IonTitle>Check Your Virtual Event Budgets</IonTitle>
-					<IonButton
-						className='header-link'
-						routerLink='/'
-						slot='end'
-						fill='clear'
-						color='dark'>
-						Home
-					</IonButton>
+
 					<IonButton
 						className='header-link'
 						routerLink='/e'
@@ -117,42 +110,12 @@ const VirtualEvent = () => {
 					</div>
 					<div className='linear-bg' style={{ width: "25%" }}></div>
 				</div>
-
-				<div className='linear-bg'>
-					<br />
-					<br /> <br /> <br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
-					<br />
+				<div
+					style={{
+						display: "flex",
+						justifyContent: "center",
+					}}>
+					<img src='https://miro.medium.com/max/1080/0*Jtd1O9H6BrB2yCeW.png' />
 				</div>
 			</IonContent>
 			<IonModal isOpen={isModalOpen} backdropDismiss={false}>
