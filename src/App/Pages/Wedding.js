@@ -28,6 +28,8 @@ const Wedding = () => {
 	const [catering, setCatering] = useState("");
 	const [music, setMusic] = useState("");
 	const [venue, setVenue] = useState("");
+	const [photo, setPhoto] = useState("");
+	const [bachelor, setBachelors] = useState("");
 	useIonViewWillEnter(() => {
 		setIsModalOpen(true);
 		document.title = `EventZon | Wedding`;
@@ -44,6 +46,8 @@ const Wedding = () => {
 				setCatering(edata.FoodAndCateringService);
 				setMusic(edata.MusicalBand);
 				setVenue(edata.Venue);
+				setPhoto(edata.Photographer);
+				setBachelors(edata.BachelorsParty);
 			})
 			.catch((e) => {
 				console.log("error", e);
@@ -82,7 +86,9 @@ const Wedding = () => {
 					<br />
 				</div>
 				<div style={{ textAlign: "center", margin: 15 }}>
-					<IonText>Your Current Budget Is :- Rs.{selectValue}</IonText>
+					<IonText>
+						<u>According to your Budget</u>
+					</IonText>
 				</div>
 				<div
 					style={{
@@ -95,19 +101,43 @@ const Wedding = () => {
 							<IonCardContent>
 								<IonList>
 									<IonText>
-										Food And Catering Service Will Be {catering}
+										Food And Catering Service Will Be :- {catering}
 									</IonText>
 								</IonList>
 								<IonList>
-									<IonText>Musical Band Will Be {music}</IonText>
+									<IonText>Musical Band Will Be :- {music}</IonText>
 								</IonList>
 								<IonList>
-									<IonText>Venue Will Be {venue}</IonText>
+									<IonText>Photographer Will Be :- {photo}</IonText>
+								</IonList>
+								<IonList>
+									<IonText>
+										Bachelors' & Bachelorettes' Party :- {bachelor}
+									</IonText>
+								</IonList>
+								<IonList>
+									<IonText>Venue Will Be :- {venue}</IonText>
 								</IonList>
 							</IonCardContent>
-							<IonButton onClick={() => setIsModalOpen(true)}>
-								Check More Options
-							</IonButton>
+							<div
+								style={{
+									display: "flex",
+									flexDirection: "row",
+								}}>
+								<IonButton onClick={() => setIsModalOpen(true)}>
+									Change Budget
+								</IonButton>
+
+								<a
+									style={{
+										marginLeft: "20px",
+									}}
+									target='_blank'
+									href='https://docs.google.com/forms/d/e/1FAIpQLSeI1OBeNVLHHF8IB4zWbEyS85HSMy1yD4AFH-0F6X_SGdPJWg/viewform?usp=sf_link'>
+									<br />
+									Book Your Event Now!{" "}
+								</a>
+							</div>
 						</IonCard>
 					</div>
 					<div className='linear-bg' style={{ width: "25%" }}></div>
@@ -133,9 +163,14 @@ const Wedding = () => {
 								onIonChange={(e) => {
 									setSelectValue(e.detail.value);
 								}}>
-								<IonSelectOption value='<800000'>{"< 800000"}</IonSelectOption>
+								<IonSelectOption value='<800000'>
+									{"Rs. 8,00,000 - 12,00,000"}
+								</IonSelectOption>
 								<IonSelectOption value='<1200000'>
-									{"< 1200000"}
+									{"Rs. 12,00,000 - 30,00,000"}
+								</IonSelectOption>
+								<IonSelectOption value='>200'>
+									{"Rs. 30,00,000 - 45,00,000"}
 								</IonSelectOption>
 							</IonSelect>
 						</IonItem>

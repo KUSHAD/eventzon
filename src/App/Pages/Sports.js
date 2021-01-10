@@ -90,7 +90,9 @@ const Sports = () => {
 					<br />
 				</div>
 				<div style={{ textAlign: "center", margin: 15 }}>
-					<IonText>Your Current Budget Is :- Rs.{selectValue}</IonText>
+					<IonText>
+						<u>According to your Budget</u>
+					</IonText>
 				</div>
 				<div
 					style={{
@@ -103,32 +105,46 @@ const Sports = () => {
 						<IonCard>
 							<IonCardContent>
 								<IonList>
-									<IonText>{balls} Ball Will be Provided</IonText>
+									<IonText>{balls} Balls Will be Provided</IonText>
 								</IonList>
 								<IonList>
-									<IonText>{cheerLeader} Will Be Provided</IonText>
+									<IonText>CheerLeaders Will Be :- {cheerLeader}</IonText>
 								</IonList>
 								<IonList>
-									<IonText>
-										{commentators} Commentators Will Be Provided
-									</IonText>
+									<IonText>Commentators will be :- {commentators}</IonText>
 								</IonList>
 								<IonList>
-									<IonText>{refferree} Referree Will Be Provided</IonText>
+									<IonText>{refferree} Referrees Will Be Provided</IonText>
 								</IonList>
 								<IonList>
-									<IonText>Refreshments Will Be {refreshments}</IonText>
+									<IonText>Refreshments Will Be :- {refreshments}</IonText>
 								</IonList>
 								<IonList>
-									<IonText>Media Coverage Will Be {mediaCoverage}</IonText>
+									<IonText>Media Coverage Will Be :- {mediaCoverage}</IonText>
 								</IonList>
 								<IonList>
-									<IonText>Venue Will Be {venue}</IonText>
+									<IonText>Venue Will Be :- {venue}</IonText>
 								</IonList>
 							</IonCardContent>
-							<IonButton onClick={() => setIsModalOpen(true)}>
-								Check More Options
-							</IonButton>
+							<div
+								style={{
+									display: "flex",
+									flexDirection: "row",
+								}}>
+								<IonButton onClick={() => setIsModalOpen(true)}>
+									Change Budget
+								</IonButton>
+
+								<a
+									style={{
+										marginLeft: "20px",
+									}}
+									target='_blank'
+									href='https://docs.google.com/forms/d/e/1FAIpQLSeI1OBeNVLHHF8IB4zWbEyS85HSMy1yD4AFH-0F6X_SGdPJWg/viewform?usp=sf_link'>
+									<br />
+									Book Your Event Now!{" "}
+								</a>
+							</div>
 						</IonCard>
 					</div>
 				</div>
@@ -153,9 +169,15 @@ const Sports = () => {
 								onIonChange={(e) => {
 									setSelectValue(e.detail.value);
 								}}>
-								<IonSelectOption value='<40000'>{"< 40000"}</IonSelectOption>
-								<IonSelectOption value='<80000'>{"< 80000"}</IonSelectOption>
-								<IonSelectOption value='<120000'>{"< 120000"}</IonSelectOption>
+								<IonSelectOption value='<40000'>
+									{"Rs. 40,000 - 60,000"}
+								</IonSelectOption>
+								<IonSelectOption value='<80000'>
+									{"Rs. 60,000 - 1,00,000 "}
+								</IonSelectOption>
+								<IonSelectOption value='<120000'>
+									{"Rs. 1,00,000 - 1,60,000"}
+								</IonSelectOption>
 							</IonSelect>
 						</IonItem>
 						<IonButton disabled={!selectValue} onClick={fetchData}>

@@ -129,6 +129,20 @@ const LandingScreen = () => {
 						</IonButton>
 					</div>
 				</div>
+				<a
+					href='https://video-chat-app-kc.herokuapp.com/'
+					rel='noopener noreferrer'
+					target='_blank'>
+					<h1
+						style={{
+							textDecoration: "none",
+							color: "black",
+							textAlign: "center",
+						}}>
+						Check Out Our New Meeting Platform !!
+						https://video-chat-app-kc.herokuapp.com/
+					</h1>
+				</a>
 			</IonContent>
 		</IonPage>
 	);

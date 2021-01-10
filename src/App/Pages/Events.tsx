@@ -103,7 +103,7 @@ const Events = () => {
 										</div>
 										<IonText>See The Budget Of Your BirthDay Events</IonText>
 										<IonButton routerDirection='forward' routerLink='/bday'>
-											Check Budget
+											Check Rate Card
 										</IonButton>
 									</IonCardContent>
 								</Link>
@@ -124,12 +124,12 @@ const Events = () => {
 													width: 400,
 													height: 400,
 												}}
-												src='https://www.cedarcollege.sa.edu.au/wp-content/uploads/2017/03/Sports-day1.jpg'
+												src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRyq-YKZFFdV1rhNNHov1m0iHqukkRk9mrs3A&usqp=CAU'
 											/>
 										</div>
 										<IonText>See The Budget Of Your Sports Events</IonText>
 										<IonButton routerDirection='forward' routerLink='/sports'>
-											Check Budget
+											Check Rate Card
 										</IonButton>
 									</IonCardContent>
 								</Link>
@@ -145,7 +145,7 @@ const Events = () => {
 									<IonCardContent>
 										<div>
 											<img
-												src='https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/img-3462-1-1576693070.jpg'
+												src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyMX9JKzxK1GelX_EVg3rDWQWQHzlEyCLI4g&usqp=CAU'
 												alt='pic'
 												style={{
 													width: 400,
@@ -154,7 +154,7 @@ const Events = () => {
 											/>
 										</div>
 										<IonText>See Budgets Of Your Wedding Event</IonText>
-										<IonButton href='/wedding'>Check Your Budgets</IonButton>
+										<IonButton href='/wedding'> Check Rate Card</IonButton>
 									</IonCardContent>
 								</Link>
 							</IonCard>
@@ -188,7 +188,7 @@ const Events = () => {
 											/>
 										</div>
 										<IonText>See Budgets Of Your Brand Launch Event</IonText>
-										<IonButton href='/brand'>Check Your Budgets</IonButton>
+										<IonButton href='/brand'> Check Rate Card</IonButton>
 									</IonCardContent>
 								</Link>
 							</IonCard>
@@ -212,7 +212,7 @@ const Events = () => {
 											/>
 										</div>
 										<IonText>See Budgets Of Your Product Launch Event</IonText>
-										<IonButton href='/product'>Check Your Budgets</IonButton>
+										<IonButton href='/product'> Check Rate Card</IonButton>
 									</IonCardContent>
 								</Link>
 							</IonCard>
@@ -235,7 +235,7 @@ const Events = () => {
 											/>
 										</div>
 										<IonText>See Budgets Of Your Virtual Meet Events</IonText>
-										<IonButton href='/virtual'>Check Your Budgets</IonButton>
+										<IonButton href='/virtual'> Check Rate Card</IonButton>
 									</IonCardContent>
 								</Link>
 							</IonCard>
@@ -299,6 +299,20 @@ const Events = () => {
 						</IonButton>
 					</div>
 				</div>
+				<a
+					href='https://video-chat-app-kc.herokuapp.com/'
+					rel='noopener noreferrer'
+					target='_blank'>
+					<h1
+						style={{
+							textDecoration: "none",
+							color: "black",
+							textAlign: "center",
+						}}>
+						Check Out Our New Meeting Platform !!
+						https://video-chat-app-kc.herokuapp.com/
+					</h1>
+				</a>
 			</IonContent>
 		</IonPage>
 	);

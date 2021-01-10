@@ -90,7 +90,9 @@ const BirthdayParty = () => {
 					<br />
 				</div>
 				<div style={{ textAlign: "center", margin: 15 }}>
-					<IonText>Your Current Budget Is :- Rs.{selectValue}</IonText>
+					<IonText>
+						<u>According to your Budget</u>
+					</IonText>
 				</div>
 				<div
 					style={{
@@ -125,9 +127,25 @@ const BirthdayParty = () => {
 									<IonText>Venue Will Be {location}</IonText>
 								</IonList>
 							</IonCardContent>
-							<IonButton onClick={() => setIsModalOpen(true)}>
-								Check More Options
-							</IonButton>
+							<div
+								style={{
+									display: "flex",
+									flexDirection: "row",
+								}}>
+								<IonButton onClick={() => setIsModalOpen(true)}>
+									Change Budget
+								</IonButton>
+
+								<a
+									style={{
+										marginLeft: "20px",
+									}}
+									target='_blank'
+									href='https://docs.google.com/forms/d/e/1FAIpQLSeI1OBeNVLHHF8IB4zWbEyS85HSMy1yD4AFH-0F6X_SGdPJWg/viewform?usp=sf_link'>
+									<br />
+									Book Your Event Now!{" "}
+								</a>
+							</div>
 						</IonCard>
 					</div>
 					<div className='linear-bg' style={{ width: "25%" }}></div>
@@ -153,9 +171,15 @@ const BirthdayParty = () => {
 								onIonChange={(e) => {
 									setSelectValue(e.detail.value);
 								}}>
-								<IonSelectOption value='<15000'>{"< 15000"}</IonSelectOption>
-								<IonSelectOption value='<30000'>{"< 30000"}</IonSelectOption>
-								<IonSelectOption value='<45000'>{"< 45000"}</IonSelectOption>
+								<IonSelectOption value='<15000'>
+									{"Rs. 10,000 - 25,000 "}
+								</IonSelectOption>
+								<IonSelectOption value='<30000'>
+									{"Rs. 25,000 -40,000 "}
+								</IonSelectOption>
+								<IonSelectOption value='<45000'>
+									{"Rs. 40,000 - 60,000"}
+								</IonSelectOption>
 							</IonSelect>
 						</IonItem>
 						<IonButton disabled={!selectValue} onClick={fetchData}>
