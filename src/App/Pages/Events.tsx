@@ -78,7 +78,7 @@ const Events = () => {
 					style={{
 						textAlign: "center",
 					}}>
-					<IonTitle>Event Budgets</IonTitle>
+					<h1>Event Budgets</h1>
 				</div>
 				<IonGrid>
 					<IonCol size='8'>
